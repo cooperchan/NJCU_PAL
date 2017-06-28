@@ -10,20 +10,20 @@
         android:id="@+id/signUp_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="58dp"
         android:text="Email:"
         android:textSize="24sp"
-        android:layout_below="@+id/enter_Name"
+        android:layout_below="@+id/signUp_name"
         android:layout_alignEnd="@+id/signUp_name" />
 
     <TextView
         android:id="@+id/signUp_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="47dp"
         android:text="Password:"
         android:textSize="24sp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="11dp"
         android:layout_below="@+id/enter_Email"
         android:layout_alignParentStart="true" />
 
@@ -34,7 +34,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:layout_alignBottom="@+id/signUp_email"
-        android:layout_toEndOf="@+id/signUp_password" />
+        android:layout_alignStart="@+id/enter_Password" />
 
     <EditText
         android:id="@+id/enter_Password"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="40dp"
         android:layout_below="@+id/enter_Password"
         android:layout_alignStart="@+id/enter_Password" />
 
@@ -61,8 +61,7 @@
         android:layout_height="wrap_content"
         android:text="Code:"
         android:textSize="24sp"
-        android:layout_alignBaseline="@+id/enter_counselorCode"
-        android:layout_alignBottom="@+id/enter_counselorCode"
+        android:layout_alignTop="@+id/enter_counselorCode"
         android:layout_alignEnd="@+id/signUp_email" />
 
     <TextView
@@ -81,9 +80,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:layout_alignBaseline="@+id/signUp_name"
         android:layout_alignBottom="@+id/signUp_name"
-        android:layout_alignStart="@+id/enter_Email"
-        android:layout_alignTop="@+id/signUp_name" />
+        android:layout_alignStart="@+id/enter_Email" />
 
     <RadioButton
         android:id="@+id/signUp_student"
@@ -93,9 +92,9 @@
         android:textSize="30sp"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="105dp"
+        android:layout_marginTop="31dp"
         android:layout_below="@+id/enter_counselorCode"
-        android:layout_alignStart="@+id/signUp_email"
-        android:layout_marginTop="24dp" />
+        android:layout_alignStart="@+id/signUp_password" />
 
     <RadioButton
         android:id="@+id/signUp_counselor"
@@ -106,5 +105,14 @@
         android:layout_alignBaseline="@+id/signUp_student"
         android:layout_alignBottom="@+id/signUp_student"
         android:layout_alignEnd="@+id/enter_counselorCode" />
+
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="39dp"
+        android:layout_toEndOf="@+id/signUp_password"
+        android:text="Submit" />
 
 </RelativeLayout>

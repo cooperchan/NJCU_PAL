@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     RadioButton student;
     RadioButton counselor;
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +21,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         student = (RadioButton) findViewById(R.id.signUp_student);
         counselor = (RadioButton) findViewById(R.id.signUp_counselor);
+        submit = (Button) findViewById(R.id.home_btn);
 
         student.setOnClickListener(this);
         counselor.setOnClickListener(this);
+        submit.setOnClickListener(this);
     }
 
     @Override

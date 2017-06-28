@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="njcu.pal.LogInActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User ID:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="69dp"
+        android:layout_marginTop="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="24dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="203dp"
+        android:layout_alignBaseline="@+id/home_pass"
+        android:layout_alignBottom="@+id/home_pass"
+        android:layout_alignStart="@+id/textView" />
+
+    <EditText
+        android:id="@+id/home_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="177dp"
+        android:layout_below="@+id/home_User"
+        android:layout_alignStart="@+id/home_User"
+        android:layout_marginTop="65dp" />
+
+    <EditText
+        android:id="@+id/home_User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/home_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="285dp"
+        android:layout_below="@+id/home_pass"
+        android:layout_alignStart="@+id/home_pass"
+        android:layout_marginTop="56dp" />
+
+</RelativeLayout>
