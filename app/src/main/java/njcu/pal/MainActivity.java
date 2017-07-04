@@ -34,13 +34,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch(v.getId()){
 
-            //case R.id.home_logIn:
+            case R.id.home_logIn:
+                Intent loginintent = new Intent(MainActivity.this, LogInActivity.class);
+                startActivity(loginintent);
 
-                //break;
+                break;
 
             case R.id.home_signUp:
-                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
-                startActivity(intent);
+                Intent signupintent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(signupintent);
 
                 break;
 
