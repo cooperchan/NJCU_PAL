@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView pal_logo2;
     Button logIn;
     Button signUp;
+    Button respond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         pal_logo2 = (TextView) findViewById(R.id.home_logo2);
         logIn = (Button) findViewById(R.id.home_logIn);
         signUp = (Button) findViewById(R.id.home_signUp);
+        respond = (Button) findViewById(R.id.home_inte);
 
         logIn.setOnClickListener(this);
         signUp.setOnClickListener(this);
+        respond.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(signupintent);
 
                 break;
+            case R.id.home_inte:
+                Intent res = new Intent(MainActivity.this, QuestionsActivity.class);
+                startActivity(res);
+                break;
+
+
 
 
         }
