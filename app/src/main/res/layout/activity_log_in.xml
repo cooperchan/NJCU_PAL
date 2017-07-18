@@ -10,13 +10,13 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User ID:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="69dp"
-        android:layout_marginStart="14dp"
         android:layout_alignBaseline="@+id/home_User"
         android:layout_alignBottom="@+id/home_User"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:text="Email:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="69dp" />
 
     <TextView
         android:id="@+id/textView2"
