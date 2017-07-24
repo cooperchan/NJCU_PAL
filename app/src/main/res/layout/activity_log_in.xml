@@ -49,10 +49,10 @@
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="130dp"
         tools:layout_editor_absoluteY="51dp"
-        android:layout_marginStart="33dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="45dp"
         android:layout_above="@+id/home_pass"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_marginBottom="45dp" />
+        android:layout_toEndOf="@+id/textView2" />
 
     <Button
         android:id="@+id/home_log"
