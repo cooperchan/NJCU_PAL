@@ -10,11 +10,11 @@
         android:id="@+id/signUp_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="44dp"
         android:text="Email:"
         android:textSize="24sp"
-        android:layout_below="@+id/signUp_name"
-        android:layout_alignEnd="@+id/signUp_name" />
+        android:layout_below="@+id/enter_Name"
+        android:layout_alignStart="@+id/signUp_password" />
 
     <TextView
         android:id="@+id/signUp_password"
@@ -61,8 +61,8 @@
         android:layout_height="wrap_content"
         android:text="Code:"
         android:textSize="24sp"
-        android:layout_alignTop="@+id/enter_counselorCode"
-        android:layout_alignEnd="@+id/signUp_email" />
+        android:layout_above="@+id/signUp_student"
+        android:layout_alignStart="@+id/signUp_student" />
 
     <TextView
         android:id="@+id/signUp_name"
@@ -88,23 +88,23 @@
         android:id="@+id/signUp_student"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Student"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="105dp"
-        android:layout_marginTop="31dp"
+        android:layout_alignStart="@+id/signUp_password"
         android:layout_below="@+id/enter_counselorCode"
-        android:layout_alignStart="@+id/signUp_password" />
+        android:layout_marginTop="31dp"
+        android:text="Student"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="105dp" />
 
     <RadioButton
         android:id="@+id/signUp_counselor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Counselor"
-        android:textSize="30sp"
         android:layout_alignBaseline="@+id/signUp_student"
         android:layout_alignBottom="@+id/signUp_student"
-        android:layout_alignEnd="@+id/enter_counselorCode" />
+        android:layout_alignEnd="@+id/enter_counselorCode"
+        android:text="Counselor"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/home_btn"

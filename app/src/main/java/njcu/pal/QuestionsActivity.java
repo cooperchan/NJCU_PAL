@@ -10,6 +10,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class QuestionsActivity extends AppCompatActivity implements View.OnClickListener {
+    Integer i = 0;
     TextView tvquestion;
     Button submit;
     CheckBox cb1, cb2, cb3, cb4, cb5;
@@ -61,7 +62,26 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
+        switch(v.getId()) {
 
+            case R.id.questions_submit:
+
+                if (i <= 24) {
+                    tvquestion.setText(Question[i + 1]);
+                    i = i + 1;
+                }
+                // else { send form data }
+                if (!cb1.isChecked()|| !cb2.isChecked() || !cb3.isChecked() || !cb4.isChecked() || !cb5.isChecked()) {
+
+                }
+                cb1.setChecked(false);
+                cb2.setChecked(false);
+                cb3.setChecked(false);
+                cb4.setChecked(false);
+                cb5.setChecked(false);
+
+                break;
+        }
     }
 
     public void onCheckboxClicked(View v) {
@@ -74,6 +94,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
                 cb4.setChecked(false);
                 cb5.setChecked(false);
                 break;
+
             case R.id.cb_2:
 
                 cb1.setChecked(false);
@@ -81,6 +102,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
                 cb4.setChecked(false);
                 cb5.setChecked(false);
                 break;
+
             case R.id.cb_3:
 
                 cb1.setChecked(false);
@@ -88,6 +110,7 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
                 cb4.setChecked(false);
                 cb5.setChecked(false);
                 break;
+
             case R.id.cb_4:
 
                 cb1.setChecked(false);
