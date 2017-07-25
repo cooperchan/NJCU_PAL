@@ -18,10 +18,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
-import static njcu.pal.Remote.Service.serEmail;
-import static njcu.pal.Remote.Service.serPassword;
-
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView Logo1, Logo2;
@@ -65,7 +61,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-                Service.Factory.getInstance().login(serEmail, serPassword).enqueue(new Callback<Email>() {
+                Service.Factory.getInstance().login(user.getText().toString(), password.getText().toString()).enqueue(new Callback<Email>() {
 
                     @Override
                     public void onResponse(Call<Email> call, Response<Email> response) {

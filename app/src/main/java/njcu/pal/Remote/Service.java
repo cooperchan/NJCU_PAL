@@ -16,13 +16,11 @@ import java.util.List;
 
 public interface Service {
     String BASE_URL = "http://104.236.253.140/";
-    String serEmail = LogInActivity.getemail();
-    String serPassword = LogInActivity.getpassword();
 
 
 
     @GET("api/pal/login/{email}/{password}")
-    Call<Email> login(@Path("email")String serEmail, @Path("password")String serPassword);
+    Call<Email> login(@Path("email")String email, @Path("password")String password);
 
 
     class Factory {
