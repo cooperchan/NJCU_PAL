@@ -29,10 +29,10 @@
         android:id="@+id/home_logIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="129dp"
+        android:layout_marginTop="19dp"
         android:text="Log in"
-        android:layout_below="@+id/home_logo2"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/home_inte"
+        android:layout_alignStart="@+id/home_inte" />
 
     <Button
         android:id="@+id/home_signUp"
@@ -48,7 +48,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Questions"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="116dp"
+        android:layout_below="@+id/home_logo2"
         android:layout_alignStart="@+id/home_signUp" />
+
+    <Button
+        android:id="@+id/counselor_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_logo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Counselor\nQuestions" />
 
 </RelativeLayout>
