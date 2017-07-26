@@ -73,7 +73,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                // Integer school = Integer.parseInt(school_code.getText().toString());
                // Integer student1 = Integer.parseInt(rstudent.toString());
 
-                Service.Factory.getInstance().signup("haha", "sdfa@haha.com", "passlol", "1234", "1").enqueue(new Callback<Email>() {
+                Service.Factory.getInstance().signup(name.getText().toString(), email.getText().toString(), password.getText().toString(), school_code.getText().toString(), rstudent + "").enqueue(new Callback<Email>() {
                     @Override
                     public void onResponse(Call<Email> call, Response<Email> response) {
                         Log.d("Success", "Connection Successful");

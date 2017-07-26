@@ -1,6 +1,6 @@
 package njcu.pal.Remote;
 
-import njcu.pal.LogInActivity;
+import njcu.pal.CounselorsList;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -21,6 +21,8 @@ import java.util.concurrent.TimeUnit;
 public interface Service {
     String BASE_URL = "http://104.236.253.140/";
 
+    @GET("api/pal/{school_code}/all_counselors")
+    Call<List<Counselor>> getAllCounselors(@Path("school_code")String school_code);
 
 
     @GET("api/pal/login/{email}/{password}")

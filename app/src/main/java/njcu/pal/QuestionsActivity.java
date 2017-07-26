@@ -70,7 +70,9 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
                     tvquestion.setText(Question[i + 1]);
                     i = i + 1;
                 }
-                // else { send form data }
+                else {
+
+                }
                 if (!cb1.isChecked()|| !cb2.isChecked() || !cb3.isChecked() || !cb4.isChecked() || !cb5.isChecked()) {
 
                 }
