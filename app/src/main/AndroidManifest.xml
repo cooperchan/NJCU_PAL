@@ -18,16 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity"
-        android:parentActivityName=".MainActivity" />
         <activity
-        android:name=".LogInActivity"
-        android:parentActivityName=".MainActivity" />
+            android:name=".SignUpActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
-        android:name=".QuestionsActivity"
-        android:parentActivityName=".MainActivity" />
+            android:name=".LogInActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QuestionsActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".CounselorQuestions"
-            android:parentActivityName=".MainActivity"/>
+                  android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button logIn;
     Button signUp;
     Button respond;
+    Button counselorquestions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         logIn = (Button) findViewById(R.id.home_logIn);
         signUp = (Button) findViewById(R.id.home_signUp);
         respond = (Button) findViewById(R.id.home_inte);
+        counselorquestions = (Button) findViewById(R.id.counselor_btn);
 
         logIn.setOnClickListener(this);
         signUp.setOnClickListener(this);
         respond.setOnClickListener(this);
+        counselorquestions.setOnClickListener(this);
 
 
 
@@ -67,6 +70,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(res);
                 break;
 
+            case R.id.counselor_btn:
+                Intent cques = new Intent(MainActivity.this, CounselorQuestions.class);
+                startActivity(cques);
+                break;
 
 
 

@@ -16,6 +16,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     RadioButton student;
