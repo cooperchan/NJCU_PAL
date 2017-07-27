@@ -1,5 +1,6 @@
 package njcu.pal;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -55,6 +56,10 @@ public class CounselorQuestions extends AppCompatActivity implements View.OnClic
         c_submit.setOnClickListener(this);
         counselorQuestions.setText(CounselorQ[0]);
 
+        if (!counselor1.isChecked()|| !counselor2.isChecked() || !counselor3.isChecked() || !counselor4.isChecked() || !counselor5.isChecked()) {
+            c_submit.setClickable(false);
+        }
+
     }
 
     @Override
@@ -64,38 +69,63 @@ public class CounselorQuestions extends AppCompatActivity implements View.OnClic
 
             case R.id.counselor_submit:
 
-                if (j <= 24) {
+                if (j < 24) {
                     counselorQuestions.setText(CounselorQ[j + 1]);
                     j = j + 1;
                 }
+                else {
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(R.id.CoordinatorLayout), "Thank you for your responses.", Snackbar.LENGTH_LONG);
 
+                    snackbar.show();
+                }
                 // else { send form data }
                 if (!counselor1.isChecked()|| !counselor2.isChecked() || !counselor3.isChecked() || !counselor4.isChecked() || !counselor5.isChecked()) {
 
-                }
-                counselor1.setChecked(false);
-                counselor2.setChecked(false);
-                counselor3.setChecked(false);
-                counselor4.setChecked(false);
-                counselor5.setChecked(false);
+                    c_submit.setClickable(false);
+                    counselor1.setChecked(false);
+                    counselor2.setChecked(false);
+                    counselor3.setChecked(false);
+                    counselor4.setChecked(false);
+                    counselor5.setChecked(false);
 
+                    if (counselor1.isChecked() || counselor2.isChecked() || counselor3.isChecked() || counselor4.isChecked() || counselor5.isChecked()) {
+                        c_submit.setClickable(true);
+                    }
+                }
                 break;
         }
     }
 
     public void onCheckboxClicked(View v){
-        switch(v.getId()) {
+
+            switch(v.getId()) {
 
             case R.id.counselor_1:
+                if (counselor1.isChecked()) {
+                    c_submit.setClickable(true);
 
+                }
+                else {
+                    c_submit.setClickable(false);
+                }
                 counselor2.setChecked(false);
                 counselor3.setChecked(false);
                 counselor4.setChecked(false);
                 counselor5.setChecked(false);
+
+
                 break;
 
             case R.id.counselor_2:
 
+                if (counselor2.isChecked()) {
+                    c_submit.setClickable(true);
+
+                }
+                else {
+                    c_submit.setClickable(false);
+                }
                 counselor1.setChecked(false);
                 counselor3.setChecked(false);
                 counselor4.setChecked(false);
@@ -104,6 +134,13 @@ public class CounselorQuestions extends AppCompatActivity implements View.OnClic
 
             case R.id.counselor_3:
 
+                if (counselor3.isChecked()) {
+                    c_submit.setClickable(true);
+
+                }
+                else {
+                    c_submit.setClickable(false);
+                }
                 counselor1.setChecked(false);
                 counselor2.setChecked(false);
                 counselor4.setChecked(false);
@@ -112,6 +149,13 @@ public class CounselorQuestions extends AppCompatActivity implements View.OnClic
 
             case R.id.counselor_4:
 
+                if (counselor4.isChecked()) {
+                    c_submit.setClickable(true);
+
+                }
+                else {
+                    c_submit.setClickable(false);
+                }
                 counselor1.setChecked(false);
                 counselor2.setChecked(false);
                 counselor3.setChecked(false);
@@ -119,6 +163,13 @@ public class CounselorQuestions extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.counselor_5:
 
+                if (counselor5.isChecked()) {
+                    c_submit.setClickable(true);
+
+                }
+                else {
+                    c_submit.setClickable(false);
+                }
                 counselor1.setChecked(false);
                 counselor2.setChecked(false);
                 counselor3.setChecked(false);

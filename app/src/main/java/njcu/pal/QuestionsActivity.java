@@ -1,5 +1,8 @@
 package njcu.pal;
 
+import android.content.Intent;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -56,6 +59,10 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
         submit.setOnClickListener(this);
         tvquestion.setText(Question[0]);
 
+        if (!cb1.isChecked()|| !cb2.isChecked() || !cb3.isChecked() || !cb4.isChecked() || !cb5.isChecked()) {
+            submit.setClickable(false);
+        }
+
     }
 
     @Override
@@ -64,21 +71,33 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.questions_submit:
 
-                if (i <= 24) {
+                if (i < 24) {
                     tvquestion.setText(Question[i + 1]);
                     i = i + 1;
                 }
                 else {
 
+                    Snackbar snackbar = Snackbar
+                            .make(findViewById(R.id.CoordinatorLayout), "Thank you for your responses.", Snackbar.LENGTH_LONG);
+
+                    snackbar.show();
+                    //Intent intent = new Intent(QuestionsActivity.this, MainActivity.class);
+                    //startActivity(intent);
+
                 }
                 if (!cb1.isChecked()|| !cb2.isChecked() || !cb3.isChecked() || !cb4.isChecked() || !cb5.isChecked()) {
 
+                    submit.setClickable(false);
+                    cb1.setChecked(false);
+                    cb2.setChecked(false);
+                    cb3.setChecked(false);
+                    cb4.setChecked(false);
+                    cb5.setChecked(false);
+
+                    if (cb1.isChecked()|| cb2.isChecked() || cb3.isChecked() || cb4.isChecked() || cb5.isChecked()) {
+                        submit.setClickable(true);
+                    }
                 }
-                cb1.setChecked(false);
-                cb2.setChecked(false);
-                cb3.setChecked(false);
-                cb4.setChecked(false);
-                cb5.setChecked(false);
 
                 break;
         }
@@ -89,6 +108,13 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.cb_1:
 
+                if (cb1.isChecked()) {
+                    submit.setClickable(true);
+
+                }
+                else {
+                    submit.setClickable(false);
+                }
                 cb2.setChecked(false);
                 cb3.setChecked(false);
                 cb4.setChecked(false);
@@ -97,6 +123,13 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.cb_2:
 
+                if (cb2.isChecked()) {
+                    submit.setClickable(true);
+
+                }
+                else {
+                    submit.setClickable(false);
+                }
                 cb1.setChecked(false);
                 cb3.setChecked(false);
                 cb4.setChecked(false);
@@ -105,6 +138,13 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.cb_3:
 
+                if (cb3.isChecked()) {
+                    submit.setClickable(true);
+
+                }
+                else {
+                    submit.setClickable(false);
+                }
                 cb1.setChecked(false);
                 cb2.setChecked(false);
                 cb4.setChecked(false);
@@ -113,6 +153,13 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.cb_4:
 
+                if (cb4.isChecked()) {
+                    submit.setClickable(true);
+
+                }
+                else {
+                    submit.setClickable(false);
+                }
                 cb1.setChecked(false);
                 cb2.setChecked(false);
                 cb3.setChecked(false);
@@ -121,6 +168,13 @@ public class QuestionsActivity extends AppCompatActivity implements View.OnClick
 
             case R.id.cb_5:
 
+                if (cb5.isChecked()) {
+                    submit.setClickable(true);
+
+                }
+                else {
+                    submit.setClickable(false);
+                }
                 cb1.setChecked(false);
                 cb2.setChecked(false);
                 cb3.setChecked(false);

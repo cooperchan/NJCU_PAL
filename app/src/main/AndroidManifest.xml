@@ -29,6 +29,9 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".CounselorQuestions"
                   android:parentActivityName=".MainActivity"/>
+        <activity android:name=".CounselorsList"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>
